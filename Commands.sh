@@ -1,7 +1,7 @@
 #for deleting last x files
 #can't have spaces in files
 #! /bin/bash
-cd DeleteOldestFiles/tests
+cd ~/Scans
 threshold="85"
 result=`df -kh |grep -v "Filesystem" | awk '{ print $5 }' | sed 's/%//g' | head -n 1`
 while [ result > threshold ]
